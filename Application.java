@@ -14,5 +14,14 @@ public class Application {
         for(Shape s: shapes) {
             s.draw();
         }
+
+        // Example of using the Emphasis decorator
+        System.out.println("\nShapes with Emphasis:");
+        Shape emphasizedCircle = new Emphasis(factory.getShape("circle"));
+        emphasizedCircle.draw();
+
+        System.out.println();
+        Shape emphasizedSquare = new Emphasis(factory.getShape("square"));
+        emphasizedSquare.draw();
     }
 }
